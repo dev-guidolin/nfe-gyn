@@ -1,16 +1,16 @@
 {
-    "name": "nfephp-org/sped-nfse-amtec",
+    "name": "nfe-gyn",
     "type": "library",
     "version": "1.0.0",
     "description": "API para geração e comunicação de RPS e NFSe no padão AMTEC Goiania.",
     "keywords": ["nfe","nfse","sped","nfephp"],
-    "homepage": "https://github.com/nfephp-org/sped-nfse-amtec",
+    "homepage": "https://github.com/dev-guidolin/nfe-gyn",
     "license": ["LGPL-3.0-or-later", "GPL-3.0-or-later", "MIT"],
     "authors": [
         {
-            "name": "Roberto L. Machado",
-            "email": "linux.rlm@gmail.com.br",
-            "homepage": "http://www.nfephp.org",
+            "name": "Thiago Arruda",
+            "email": "developer.arruda@gmail.com.br",
+            "homepage": "https://github.com/dev-guidolin",
             "role": "Developer"
         }
     ],
