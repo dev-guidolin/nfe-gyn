@@ -52,14 +52,14 @@ class Tools
      */
     public function __construct($config, Certificate $cert)
     {
-        $this->config = \Safe\json_decode($config);
+        $this->config = json_decode($config);
         $this->certificate = $cert;
         $this->buildPrestadorTag();
         $wsobj = $this->urls;
         if (empty($this->urls[$this->config->cmun])) {
             throw new \Exception('Apenas Goiania é aceito. cMun=5208707');
         }
-        $this->wsobj = \Safe\json_decode(\Safe\json_encode($this->urls[$this->config->cmun]));
+        $this->wsobj = json_decode(json_encode($this->urls[$this->config->cmun]));
         $this->environment = 'producao';
         if ($this->config->tpamb === 1) {
             $this->environment = 'producao';

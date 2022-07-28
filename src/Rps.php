@@ -106,7 +106,7 @@ class Rps implements RpsInterface
         if (!$validator->isValid()) {
             $msg = "";
             foreach ($validator->getErrors() as $error) {
-                $msg .= \Safe\sprintf("[%s] %s\n", $error['property'], $error['message']);
+                $msg .= sprintf("[%s] %s\n", $error['property'], $error['message']);
             }
             throw new \InvalidArgumentException($msg);
         }

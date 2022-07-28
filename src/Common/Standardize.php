@@ -108,13 +108,13 @@ class Standardize
         if (!empty($xml)) {
             $this->whichIs($xml);
         }
-        $sxml = \Safe\simplexml_load_string($this->node);
+        $sxml = simplexml_load_string($this->node);
         $this->json = str_replace(
             '@attributes',
             'attributes',
-            \Safe\json_encode($sxml, JSON_PRETTY_PRINT)
+            json_encode($sxml, JSON_PRETTY_PRINT)
         );
-        return \Safe\json_decode($this->json);
+        return json_decode($this->json);
     }
     
     /**
@@ -140,6 +140,6 @@ class Standardize
         if (!empty($xml)) {
             $this->toStd($xml);
         }
-        return \Safe\json_decode($this->json, true);
+        return json_decode($this->json, true);
     }
 }

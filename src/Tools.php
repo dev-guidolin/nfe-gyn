@@ -89,12 +89,12 @@ class Tools extends BaseTools
             . "inscricao={$this->config->im}"
             . "&nota=$nota"
             . "&verificador=$verificador";
-        $ch = \Safe\curl_init();
+        $ch = curl_init();
         $timeout = 5;
-        \Safe\curl_setopt($ch, CURLOPT_URL, $url);
-        \Safe\curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        \Safe\curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-        $data = (string) \Safe\curl_exec($ch);
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+        $data = (string) curl_exec($ch);
         curl_close($ch);
         $path = "http://www2.goiania.go.gov.br";
         $data = str_replace(
@@ -111,7 +111,7 @@ class Tools extends BaseTools
             . "border=\"0\">",
             $data
         );
-        $data = \Safe\iconv("ISO-8859-1//TRANSLIT", 'UTF-8', $data);
+        $data = iconv("ISO-8859-1//TRANSLIT", 'UTF-8', $data);
         return $data;
     }
 }
